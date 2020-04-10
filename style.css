@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(33, 76, 141);
+    font-family: sans-serif;
+    
+}
+h2{
+    color: white;
+    padding-left: 25px
+}
+.stopCard {
+    padding: 25px;
+    background-color: white;
+    width: calc(100% - 100px);
+
+    margin: 25px;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+
+.stopCard--top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stopCardName {
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.stopCardMins {
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.stopCardMins span {
+    font-size: 24px;
+    line-height: 2.23em;
+}
