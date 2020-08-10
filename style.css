@@ -1,7 +1,17 @@
 body{
     background-color: rgb(33, 76, 141);
     font-family: sans-serif;
-    
+    transition: transform 1s;
+}
+body.dark {
+    background-color: rgb(42,42,42);
+}
+body.spin {
+    transform: rotate(360deg);
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
 }
 h2{
     color: white;

@@ -2,12 +2,34 @@ let app = document.getElementById('app');
 // Make a request for a user with a given ID
 let stops = [
 'GRN1ST:4',
-'GRN2ND:3'
+'GRN2ND:3',
 ]
-setInterval(wa,1000000)
+let first = true;
+setInterval(wa,10 * 60 * 1000)
 function wa(){
+    if (!first) {
+        document.body.classList.add('spin');
+
+        setTimeout(function() {
+            document.body.classList.remove('spin');
+        }, 1000);
+
+        first = false;
+    }
+
     console.log('wa');
+
+    let now = new Date();
+
+    if ( now.getHours() > 18 ) {
+        if (!document.body.classList.contains('dark'))
+            document.body.classList.add('dark')
+    } else {
+        if (document.body.classList.contains('dark'))
+            document.body.classList.remove('dark')
+    }
 }
+wa();
 CUMtd()
 setInterval(CUMtd,60000)
 function CUMtd(){
@@ -68,6 +90,10 @@ function CUMtd(){
         `;
     }
 
+    if (app.innerHTML === '') {
+        app.innerHTML = '<h1>No Departures</h1>';
+    }
+
 }
 
 function goodTimeMaker() {
@@ -79,5 +105,10 @@ function goodTimeMaker() {
                 }
             })
         })
+    CUMtd();
+}
+
+function getStop(stop){
+    stops = [stop];
     CUMtd();
 }
