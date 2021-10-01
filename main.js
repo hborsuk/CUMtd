@@ -1,8 +1,7 @@
 let app = document.getElementById('app');
 // Make a request for a user with a given ID
 let stops = [
-'GRN1ST:4',
-'GRN2ND:3',
+ 'WHITESTR:1'
 ]
 let first = true;
 setInterval(wa,10 * 60 * 1000)
